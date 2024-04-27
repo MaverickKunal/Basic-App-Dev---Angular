@@ -1,0 +1,19 @@
+<!-- <p>tools works!</p>
+<p>tools works!</p> -->
+
+
+<!-- <ul *ngFor = "let tool of tools">
+    <li>{{tool. sno }} - {{tool.title}} - {{tool.des}}</li>
+</ul> -->
+<div class="container">
+    <h1 class="text-center mb-3">Tools List from Maverick</h1>
+    <app-add-tools (toolAdd) = "addtool($event)" ></app-add-tools>
+    <div class="my-3"></div>
+    <h5>Your Tools List</h5>
+    <div *ngIf="this.tools.length == 0;else elseBlock">No Tools to display</div>
+    <ng-template #elseBlock>
+    <div *ngFor = "let tool of tools">
+       <app-tools-item [tool] = "tool" (toolDelete)="deletetool($event)" (toolchecked)= "toggletool($event)"></app-tools-item>
+    </div>
+    </ng-template>
+</div>

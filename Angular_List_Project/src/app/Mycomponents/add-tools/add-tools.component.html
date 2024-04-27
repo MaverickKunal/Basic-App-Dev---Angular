@@ -1,0 +1,15 @@
+<!-- <div class="my-3"></div> -->
+<h4>Add Tools List</h4>
+<form (ngSubmit)="Onsubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Tools Title</label>
+      <input type="text"  class="form-control" [(ngModel)]="title" name = "title" id="title" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="des" class="form-label">Tools Description</label>
+      <input type="text" class="form-control" name="des" id="des" [(ngModel)]="des">
+    </div>
+    <div class="my-3">
+      <button type="submit" class="btn btn-primary">Add Tools to the List</button>
+    </div>
+  </form>
